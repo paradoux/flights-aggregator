@@ -44,7 +44,7 @@ Where:
  
 ## Air Moon
  
- The inventory can be retrieveb by an HTTP call :
+ The inventory can be retrieved by an HTTP call :
  
  ```shell
  curl -H "X-API-Key: dd764f40" https://my.api.mockaroo.com/air-moon/flights
@@ -100,7 +100,7 @@ Our API should return a json array containing the following schema:
 ```
 [
   {
-    "provider": "AIR_BOOM|AIR_JAZZ|AIR_BEAM", // one of the supplier
+    "provider": "AIR_MOON|AIR_JAZZ|AIR_BEAM", // one of the supplier
     "price": <double>,
     "departure_time": <time>,
     "arrival_time": <time>
@@ -109,11 +109,14 @@ Our API should return a json array containing the following schema:
 ```
 
 Beyong these *basic* features, we will be interested in finding out how you would handle the following use cases / scenarios:
- * Provider `Air Boom` frequently takes a long time to respond (but it does send back data). Depending on the way you developed the API it may have performance impacts on the whole search. How would you take care of this ? 
+ * Provider `Air Moon` frequently takes a long time to respond (but it does send back data). Depending on the way you developed the API it may have performance impacts on the whole search. How would you take care of this ? 
  * Provider `Air Jazz` has downtime issues from time to time, and returns a `HTTP 502 Bad Gateway` error. Once again, how would you handle this so it does not penalize the whole API.
  * The API we just created is to be used by our partners. How would you handle security ? We need to make sure only authenticated users (and authorized) can access this API.
  * We would want to rate limit our API, so each of our client has a limited number of allowed calls. How would you handle this ?
+ * Imagine we now have a lot of incoming traffic on our API, and there is some overlap on the search requests. How could we improve the program ?
  * Anything that you think could be relevant....
+
+ 
 
 # Key points
 

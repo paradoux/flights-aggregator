@@ -1,0 +1,28 @@
+{
+  "name": "bcm-backend-interview",
+  "version": "1.0.0",
+  "description": "The goal here is to create an API that returns flights information. Basically we're trying to develop an API that supplies aggregated flight searches results across multiple providers (skyscanner clone).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BCM-ENERGY-team/bcm-backend-interview.git"
+  },
+  "author": "Axel Mtn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BCM-ENERGY-team/bcm-backend-interview/issues"
+  },
+  "homepage": "https://github.com/BCM-ENERGY-team/bcm-backend-interview#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}

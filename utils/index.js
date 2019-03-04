@@ -8,7 +8,9 @@ module.exports.csvToJSON = csvData => {
     const values = row.split(",")
     let json = {}
     for (var i = 0; i < headers.length; i++) {
-      json[headers[i]] = values[i]
+      headers[i] === "p"
+        ? (json[headers[i]] = parseFloat(values[i]))
+        : (json[headers[i]] = values[i])
     }
     data.push(json)
   })
@@ -34,6 +36,6 @@ module.exports.priceSorter = list => {
   // Create a new list of flights sorted by price
   const flights = [...list]
   return flights.sort((flighta, flightb) => {
-    return parseFloat(flightb.price) - parseFloat(flighta.price)
+    return parseFloat(flighta.price) - parseFloat(flightb.price)
   })
 }

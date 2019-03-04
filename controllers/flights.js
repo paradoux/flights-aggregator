@@ -42,7 +42,7 @@ module.exports.flightsReadAll = async (req, res, next) => {
     ]
 
     // Sort and send 50 results
-    const sortedFlights = priceSorter(flights).splice(0, 50)
+    const sortedFlights = priceSorter(flights).slice(0, 49)
     res.status = 200
     res.json({sortedFlights})
   } catch (err) {

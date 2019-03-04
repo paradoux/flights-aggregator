@@ -4,7 +4,7 @@
   "description": "The goal here is to create an API that returns flights information. Basically we're trying to develop an API that supplies aggregated flight searches results across multiple providers (skyscanner clone).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon index.js"
   },
   "repository": {
@@ -22,7 +22,11 @@
     "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-jest": "^22.3.0",
     "express": "^4.16.4",
-    "nodemon": "^1.18.10"
+    "jest": "^24.1.0",
+    "nock": "^10.0.6",
+    "nodemon": "^1.18.10",
+    "supertest": "^3.4.2"
   }
 }

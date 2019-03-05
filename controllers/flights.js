@@ -11,19 +11,32 @@ const getCompanyFlights = companyName => {
       url: `https://my.api.mockaroo.com/${companyName}/flights?key=${flightsApiKey}`
     })
       .then(res => {
-        if (res.status === 502) {
-          return getCompanyFlights(companyName)
-        }
         resolve(res.data)
       })
       .catch(err => {
         const error = new Error()
-        error.message = "Can't get flights from provider API"
+        error.message = `Can't get flights from the following provider API: ${companyName}`
         error.status = 500
         reject(error)
       })
   })
 }
+
+// const getAllCompaniesFlights = () => {
+//   new Promise((resolve, reject) => {
+//     const [airMoonData, airJazzData, airBeamData] = await Promise.all([
+//       getCompanyFlights("air-moon"),
+//       getCompanyFlights("air-jazz"),
+//       getCompanyFlights("air-beam")
+//     ])
+
+//       if (!airMoonData || !airJazzData || !airBeamData ){
+//         const error = new Error()
+//         error.message = ``
+//         reject()
+//       }
+//   })
+// }
 
 module.exports.flightsReadAll = async (req, res, next) => {
   try {

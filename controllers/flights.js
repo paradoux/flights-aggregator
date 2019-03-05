@@ -22,22 +22,6 @@ const getCompanyFlights = companyName => {
   })
 }
 
-// const getAllCompaniesFlights = () => {
-//   new Promise((resolve, reject) => {
-//     const [airMoonData, airJazzData, airBeamData] = await Promise.all([
-//       getCompanyFlights("air-moon"),
-//       getCompanyFlights("air-jazz"),
-//       getCompanyFlights("air-beam")
-//     ])
-
-//       if (!airMoonData || !airJazzData || !airBeamData ){
-//         const error = new Error()
-//         error.message = ``
-//         reject()
-//       }
-//   })
-// }
-
 module.exports.flightsReadAll = async (req, res, next) => {
   try {
     // Wait for all promises to resolve

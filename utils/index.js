@@ -1,3 +1,4 @@
+// Taken from external source, should be replaced by npm package
 module.exports.csvToJSON = csvData => {
   const csv = csvData.split("\n")
   const data = []
